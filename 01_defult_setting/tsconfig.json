@@ -1,0 +1,18 @@
+{
+    "compilerOptions":{
+    "rootDir":"01_defult_setting/src",     // ts파일 저장하는곳 지정? 
+    "outDir":"./build/js", //js 파일이 생성되는 곳 지정
+    "target":"ES2015",    // 생성되는 js 파일은 es6버전
+    "noEmitOnError":false, // 에러가있을시 js파일로 안바뀜
+    "module":"ESNext",
+    "moduleResolution":"Node",
+    "esModuleInterop":true,
+    "lib":["ESNext","DOM"],
+    "strict": true, // ts파일을 엄격한 모드로 할 것인지 아닌지 
+},
+"include":[
+    "01_defult_setting/src/**/*.ts",   // src 안에서만든 ts파일만 js 자동생성
+    ],
+"exclude": ["c:/Users/82102/OneDrive/바탕 화면/typescript_prac/typescript_prac/01_default_setting/build/js"]
+
+}
