@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(210 25% 7.8431%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(210 25% 7.8431%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(210 25% 7.8431%);
+  --primary: hsl(240 73% 59%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(159 61% 41%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --accent: hsl(42 92% 50%);
+  --accent-foreground: hsl(210 25% 7.8431%);
+  --muted: hsl(210 40% 96%);
+  --muted-foreground: hsl(215 16% 47%);
+  --destructive: hsl(356 91% 54%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(214 32% 91%);
+  --input: hsl(214 32% 91%);
+  --ring: hsl(240 73% 59%);
+  --chart-1: hsl(240 73% 59%);
+  --chart-2: hsl(159 61% 41%);
+  --chart-3: hsl(42 92% 50%);
+  --chart-4: hsl(147 79% 42%);
+  --chart-5: hsl(341 75% 51%);
+  --sidebar: hsl(0 0% 100%);
+  --sidebar-foreground: hsl(210 25% 7.8431%);
+  --sidebar-primary: hsl(240 73% 59%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(210 40% 96%);
+  --sidebar-accent-foreground: hsl(240 73% 59%);
+  --sidebar-border: hsl(214 32% 91%);
+  --sidebar-ring: hsl(240 73% 59%);
+  --font-sans: 'Noto Sans KR', sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'Courier New', monospace;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: hsl(220 14% 9%);
+  --foreground: hsl(210 40% 98%);
+  --card: hsl(224 17% 10%);
+  --card-foreground: hsl(210 40% 98%);
+  --popover: hsl(224 17% 10%);
+  --popover-foreground: hsl(210 40% 98%);
+  --primary: hsl(240 73% 59%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(159 61% 41%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --accent: hsl(42 92% 50%);
+  --accent-foreground: hsl(220 14% 9%);
+  --muted: hsl(223 17% 15%);
+  --muted-foreground: hsl(215 20% 65%);
+  --destructive: hsl(356 91% 54%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(216 19% 27%);
+  --input: hsl(216 19% 27%);
+  --ring: hsl(240 73% 59%);
+  --chart-1: hsl(240 73% 59%);
+  --chart-2: hsl(159 61% 41%);
+  --chart-3: hsl(42 92% 50%);
+  --chart-4: hsl(147 79% 42%);
+  --chart-5: hsl(341 75% 51%);
+  --sidebar: hsl(224 17% 10%);
+  --sidebar-foreground: hsl(210 40% 98%);
+  --sidebar-primary: hsl(240 73% 59%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(223 17% 15%);
+  --sidebar-accent-foreground: hsl(240 73% 59%);
+  --sidebar-border: hsl(216 19% 27%);
+  --sidebar-ring: hsl(240 73% 59%);
+  --font-sans: 'Noto Sans KR', sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'Courier New', monospace;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+
+  .category-btn {
+    @apply px-4 py-2 rounded-full border border-gray-200 dark:border-gray-600 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-200;
+  }
+  
+  .category-btn.active {
+    @apply bg-primary text-white border-primary hover:bg-primary hover:text-white;
+    background-color: hsl(var(--primary));
+  }
+  
+  .action-btn {
+    @apply w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-900 dark:hover:text-white transition-all duration-200 flex items-center justify-center;
+  }
+  
+  .quick-phrase-btn {
+    @apply px-4 py-3 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:border-primary hover:text-primary dark:hover:text-primary transition-all duration-200 transform hover:scale-105;
+  }
+  
+  .history-item, .favorite-item {
+    @apply p-3 rounded-lg bg-gray-50 dark:bg-gray-700/50 border border-gray-100 dark:border-gray-600;
+  }
+}
